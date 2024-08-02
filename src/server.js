@@ -38,7 +38,7 @@ server.use(sellersRoutes)
 server.use(authRoutes)
 // server.get("/404", (req, res)=>{
 //     res.render("404.ejs")
-// })
+// })   
 server.listen(SERVER_PORT,()=>{
     console.log("Server is running....")
 })
