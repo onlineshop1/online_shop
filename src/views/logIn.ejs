@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/register-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <div class="hero-left">
+                <img src="../public/images/welcome-vector.png" alt="Welcome Image">
+            </div>
+            <div class="hero-right">
+                <form action="/sign-in" method="post">
+                    <div class="register-title">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="phone-password">
+                            <label for="phone-input">Phone</label>
+                            <input id="phone-input" name="phoneNumber" type="number" value="+998" autocomplete="on">
+                        <div class="password-container">
+                            <label for="password-input">Password</label>
+                            <input id="password-input" name="password" type="password" autocomplete="on">
+                            <i class='bx bx-hide' id="toggle-password"></i>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    <div class="toLogin">
+                        <p>Already have an account? <span><a href="/register">Register</a></span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="../public/js/register.js"></script>
+
+</body>
+</html>

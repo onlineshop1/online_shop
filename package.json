@@ -1,0 +1,24 @@
+{
+  "name": "click",
+  "version": "1.0.0",
+  "description": "MOney transfer",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "Nodirbek",
+  "license": "ISC",
+  "dependencies": {
+    "@mihnea.dev/credit-card-generator": "^1.0.9",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "random-int": "^3.0.0",
+    "run": "^1.5.0"
+  }
+}

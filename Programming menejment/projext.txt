@@ -1,0 +1,79 @@
+ONLINE SHOP - Do'konlar uchun 
+Authentification:
+    Log-in:
+        phone number
+        password
+    Register:
+        Last name
+        First name
+        phone number 
+        password
+
+Roles:
+    Super admin
+    sotuvchi
+    customer 
+    
+Modellar:
+	User
+	Products
+
+User model: 
+	Seller:
+	    id: unique number not null
+	    first_name(ism): string not null
+	    last_name(familiya): string not null
+	    username: string not null
+	    password: string not null
+	    phone_number: string not null
+	    description: string not null
+
+	Customer:
+	    id: unique not null
+	    first_name(ism): string
+	    last_name(familiya): string
+	    username: string not null
+	    password: string not null
+	    phone_number: string not null
+
+	Admin:
+	    id: unique number not null
+	    first_name(ism): string not null
+	    last_name(familiya): string not null
+	    username: string not null
+	    password: string not null
+	    phone_number: string not null
+
+    Super admin:
+        login: string
+        password: string
+
+
+
+
+
+Super admin:
+    userlarni o'zgartira oladi GET POST PATCH
+
+
+Xaridor amallari:
+    savatga joylash --> GET POST
+    sotib olish --> GET
+    malumotlarini yangilash --> PATCH
+
+Admin amallari:
+    e'lonlarni ko'ra oladi --> GET 
+    e'lon qo'shish --> POST
+    e'lonlarni o'zgartira oladi -- PATCH
+    profil ma'lumotlarini yangilash --> POST
+
+Products model:
+	id: unique number not null
+	name: string not null
+	price: money not null(money tipi bo'masa butun sonli tip number yoki int)
+	image: string(rasmni pathi beriladi)
+	*description: string (Qaysidir mahsulotni o'ziga tegishli bo'lgan xususiyatlar)
+	*Array Ichida obyektlar qilib saqlaymiz yoki string
+	count: number yoki int not null
+	
+
