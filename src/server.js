@@ -33,6 +33,9 @@ server.get("/register",(req,res)=>{
 server.get("/login", (req, res)=>{
     res.render("logIn.ejs")
 })
+server.get("/",(req,res)=>{
+    res.render("index")
+})
 
 server.get("/super-admin", (req, res) => {
     res.render("superadmin", {
