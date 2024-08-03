@@ -34,11 +34,14 @@ server.get("/login", (req, res)=>{
     res.render("logIn.ejs")
 })
 
+server.get("/super-admin", (req, res) => {
+    res.render("superadmin", {
+    mainContentLink: `./components/superadmin-${req.query.tab}`,
+    });
+});
+
 server.use(sellersRoutes)
 server.use(authRoutes)
-// server.get("/404", (req, res)=>{
-//     res.render("404.ejs")
-// })
 server.listen(SERVER_PORT,()=>{
     console.log("Server is running....")
 })
