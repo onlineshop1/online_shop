@@ -34,6 +34,10 @@ server.get("/login", (req, res)=>{
     res.render("logIn.ejs")
 })
 
+server.get("/about", (req, res) => {
+    res.render("about")
+})
+
 server.use(sellersRoutes)
 server.use(authRoutes)
 // server.get("/404", (req, res)=>{
