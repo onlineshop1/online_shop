@@ -22,6 +22,7 @@ server.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+
 // /superadmin ga so'rov kelganda superadmin.ejs ni ochib beradi
 server.get("/superadmin", (req, res) => {
     res.render("superadmin");
@@ -59,6 +60,7 @@ server.use("/public",express.static(path.join(process.cwd(), 'src', 'public')));
 server.use(sellersRoutes)
 server.use(authRoutes)
   
+
 server.listen(SERVER_PORT,()=>{
     console.log("Server is running....")
 })
