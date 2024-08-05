@@ -1,0 +1,16 @@
+.active{
+    background-color: chocolate;
+    padding: 20px 40px;
+}
+ul{
+    display: inline-block;
+}
+ul li{
+    background-color:burlywood;
+    
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    margin: 30px;
+}
