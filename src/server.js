@@ -37,6 +37,10 @@ server.get("/",(req,res)=>{
     res.render("index")
 })
 
+server.get("/contact",(req,res)=>{
+    res.render("contact")
+})
+
 server.get("/super-admin", (req, res) => {
     res.render("superadmin", {
     mainContentLink: `./components/superadmin-${req.query.tab}`,
