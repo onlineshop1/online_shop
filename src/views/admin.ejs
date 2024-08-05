@@ -6,6 +6,12 @@
     <title>ADMIN PAGE</title>
 </head>
 <body>
-    <h1>ADMIN PAGE</h1>
+    <h1>
+        <ul>
+            <% sellers.forEach(function(seller) { %>
+                <li><%= seller.shop_name %> - <%= seller.id %></li>
+            <% }); %>
+        </ul>
+    </h1>
 </body>
 </html>
