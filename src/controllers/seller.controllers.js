@@ -35,5 +35,36 @@ export const postSeller = (req, res) =>{
     });
 }
 
+    export const deleteSeller = (req, res) => {
+        const allData = readFileCustom(filePath);
+        const sellerIndex = allData.findIndex((s) => s.id == req.params.sellerId && s.role == 'seller');
+        
+        if (sellerIndex === -1) {
+            return res.status(404).json({ message: "Seller not found" });
+        }
+        allData.splice(sellerIndex, 1);
+        writeFileCustom(filePath, allData);
+        res.status(200).json({ message: "Seller deleted successfully" });
+    }
 
+
+
+
+    
+    export const updateSeller = (req, res) => {
+        const allData = readFileCustom(filePath);
+        const sellerIndex = allData.findIndex((s) => s.id == req.params.sellerId && s.role == 'seller');
+    
+        if (sellerIndex === -1) {
+            return res.status(404).json({ message: "Seller not found" });
+        }
+
+
+        allData[sellerIndex] = { ...allData[sellerIndex], ...req.body };
+    
+        writeFileCustom(filePath, allData);
+    
+        res.status(200).json({ message: "Seller updated successfully", seller: allData[sellerIndex] });
+    };
+    
 
