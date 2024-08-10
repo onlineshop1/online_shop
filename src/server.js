@@ -52,6 +52,10 @@ server.get("/404", (req, res) => {
     res.render("404");
 });
 
+server.get("/contact",(req,res)=>{
+    res.render("contact")
+})
+
 
 console.log(path.join(process.cwd(),"src","public"))
 server.set("views",path.join(process.cwd(),"src","views"));
